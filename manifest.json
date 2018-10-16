@@ -14,7 +14,7 @@
     },
     "content_scripts": [{
         "matches": ["http://*/*", "https://*/*"],
-        "js": ["jquery.js", "background.js"],
+        "js": ["background.js"],
         "css": ["style.css"]
     }],
 
