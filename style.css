@@ -1,0 +1,13 @@
+.show-ip {
+    position: fixed;
+    width: auto;
+    height: auto;
+    left: 5px;
+    bottom: 5px;
+    padding: 5px 10px 2px;
+    font-size: 18px;
+    color: #f2f2f2;
+    background-color: rgba(51, 51, 51, 0.7);
+    border-radius: 5px;
+    z-index: 9000;
+}
