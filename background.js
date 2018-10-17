@@ -1,3 +1,6 @@
+var showIp = document.createElement('div');
+showIp.classList.add('show-ip');
+
 var xmlhttp = new XMLHttpRequest();
 
 xmlhttp.open('GET', 'https://jsonip.com', true);
@@ -8,10 +11,8 @@ xmlhttp.onreadystatechange = function() {
             var obj = JSON.parse(xmlhttp.responseText);
             var ip = obj.ip;
             
-            console.log('Show Website IP - Hostname: ', document.location.host);
-
-            var showIp = document.createElement('span');
-            showIp.classList.add('show-ip');
+            console.log('[Show Website IP] Hostname: ', document.location.host);
+            
             showIp.innerHTML = ip;
 
             document.body.appendChild(showIp);

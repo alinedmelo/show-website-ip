@@ -1,13 +1,56 @@
+#show-box {
+    display: block;
+    position: relative;
+    width: 88px;
+}
+
+#show-box ~ .show-ip {
+    display: none;
+}
+
 .show-ip {
     position: fixed;
-    width: auto;
+    display: flex;
+    width: 100%;
     height: auto;
-    left: 5px;
-    bottom: 5px;
+    bottom: 0;
     padding: 5px 10px 2px;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 18px;
     color: #f2f2f2;
-    background-color: rgba(51, 51, 51, 0.7);
-    border-radius: 5px;
+    box-sizing: border-box;
+    cursor: default;
+    overflow: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
     z-index: 9000;
+}
+
+.show-ip:hover {
+    flex-flow: row-reverse;
+    width: 100%;
+}
+
+.show-ip:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 50px;
+    width: 160px;
+    box-sizing: border-box;
+    background-color: rgba(51, 51, 51, 0.7);
+    z-index: -1;
+}
+
+.show-ip:hover:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: unset;
+    height: 50px;
+    width: 160px;
+    box-sizing: border-box;
+    background-color: rgba(51, 51, 51, 0.7);
 }
