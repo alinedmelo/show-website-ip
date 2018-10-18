@@ -1,0 +1,27 @@
+{
+  "name": "show-website-ip",
+  "version": "1.0.0",
+  "description": "shows website ip",
+  "main": "background.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alinedmelo/show-website-ip.git"
+  },
+  "author": "Aline Dias <aline.meldias@gmail.com> (https://alinedias.net/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alinedmelo/show-website-ip/issues"
+  },
+  "homepage": "https://github.com/alinedmelo/show-website-ip#readme",
+  "dependencies": {
+    "browserify": "^16.2.3",
+    "dns": "^0.2.2"
+  },
+  "devDependencies": {
+    "node-js": "^1.0.0",
+    "browserify": "latest"
+  }
+}
