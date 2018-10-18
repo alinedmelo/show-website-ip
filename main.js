@@ -4,9 +4,10 @@
 var revertDns = require('./revertDns.js');
 var getIp = require('./getIp.js');
 
+console.log('Ip', document.location.host);
+
 getIp(revertDns(document.location.host));
 
-console.log('Ip dns', revertDns(hostname));
 
 
 },{"./getIp.js":3,"./revertDns.js":4}],3:[function(require,module,exports){
@@ -42,8 +43,8 @@ module.exports = function(ip) {
 },{}],4:[function(require,module,exports){
 module.exports = function(hostname) {    
     var dns = require('dns');
-    
-    dns.lookup(hostname, function(err, result) {
+
+    dns.lookup(hostname, function(err, result){
         console.log('RESULT IP', result);
         return result;
     });

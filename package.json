@@ -18,10 +18,10 @@
   "homepage": "https://github.com/alinedmelo/show-website-ip#readme",
   "dependencies": {
     "browserify": "^16.2.3",
-    "dns": "^0.2.2"
+    "host-to-ip": "^0.3.2"
   },
   "devDependencies": {
-    "node-js": "^1.0.0",
-    "browserify": "latest"
+    "browserify": "latest",
+    "tsd": "^0.6.5"
   }
 }
