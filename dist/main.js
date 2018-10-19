@@ -7,7 +7,7 @@ console.log('IP', document.location.host);
 getIp(dnsServer(document.location.host));
 
 },{"./dnsServer.js":2,"./getIp.js":3}],2:[function(require,module,exports){
-module.exports = function(hostname) {    
+function dnsServer(hostname) {    
 
     var dns = require('dns');
 
@@ -15,9 +15,10 @@ module.exports = function(hostname) {
         console.log('RESULT IP', result);
         return result;
     });
-};
+}
+module.exports = dnsServer;
 },{"dns":4}],3:[function(require,module,exports){
-module.exports = function(ip) {
+function getIp(ip) {
 
     var showIp = document.createElement('div');
     showIp.classList.add('show-ip');
@@ -44,7 +45,9 @@ module.exports = function(ip) {
     };
     
     xmlhttp.send(null);
-};
+}
+
+module.exports = getIp;
 
 },{}],4:[function(require,module,exports){
 

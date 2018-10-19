@@ -1,4 +1,4 @@
-module.exports = function(ip) {
+function getIp(ip) {
 
     var showIp = document.createElement('div');
     showIp.classList.add('show-ip');
@@ -25,4 +25,6 @@ module.exports = function(ip) {
     };
     
     xmlhttp.send(null);
-};
+}
+
+module.exports = getIp;

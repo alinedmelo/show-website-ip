@@ -1,4 +1,4 @@
-module.exports = function(hostname) {    
+function dnsServer(hostname) {    
 
     var dns = require('dns');
 
@@ -6,4 +6,5 @@ module.exports = function(hostname) {
         console.log('RESULT IP', result);
         return result;
     });
-};
+}
+module.exports = dnsServer;
