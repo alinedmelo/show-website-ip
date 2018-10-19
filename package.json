@@ -4,7 +4,10 @@
   "description": "shows website ip",
   "main": "background.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "browserify": "browserify js/background.js js/getIp.js js/dnsServer.js -o dist/main.js",
+    "sass": "node-sass --include-path scss sass/style.scss dist/style.css",
+    "build": "npm run sass & npm run browserify"
   },
   "repository": {
     "type": "git",
@@ -17,11 +20,9 @@
   },
   "homepage": "https://github.com/alinedmelo/show-website-ip#readme",
   "dependencies": {
-    "browserify": "^16.2.3",
-    "host-to-ip": "^0.3.2"
+    "browserify": "^16.2.3"
   },
   "devDependencies": {
-    "browserify": "latest",
-    "tsd": "^0.6.5"
+    "node-sass": "^4.9.4"
   }
 }

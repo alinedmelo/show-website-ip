@@ -1,16 +1,22 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-
-},{}],2:[function(require,module,exports){
-var revertDns = require('./revertDns.js');
+var dnsServer = require('./dnsServer.js');
 var getIp = require('./getIp.js');
 
-console.log('Ip', document.location.host);
+console.log('IP', document.location.host);
 
-getIp(revertDns(document.location.host));
+getIp(dnsServer(document.location.host));
 
+},{"./dnsServer.js":2,"./getIp.js":3}],2:[function(require,module,exports){
+module.exports = function(hostname) {    
 
+    var dns = require('dns');
 
-},{"./getIp.js":3,"./revertDns.js":4}],3:[function(require,module,exports){
+    dns.lookup(hostname, function(err, result){
+        console.log('RESULT IP', result);
+        return result;
+    });
+};
+},{"dns":4}],3:[function(require,module,exports){
 module.exports = function(ip) {
 
     var showIp = document.createElement('div');
@@ -41,12 +47,5 @@ module.exports = function(ip) {
 };
 
 },{}],4:[function(require,module,exports){
-module.exports = function(hostname) {    
-    var dns = require('dns');
 
-    dns.lookup(hostname, function(err, result){
-        console.log('RESULT IP', result);
-        return result;
-    });
-};
-},{"dns":1}]},{},[2,4,3]);
+},{}]},{},[1,3,2]);
