@@ -16,10 +16,10 @@ function dnsServer() {
         console.log('RESULT IP', address);
         return address;
     });
+
 }
 module.exports = dnsServer;
 
-dnsServer();
 },{"dns-lookup-cache":9}],3:[function(require,module,exports){
 function getIp(ip) {
 
