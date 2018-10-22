@@ -1,10 +1,13 @@
-function dnsServer(hostname) {    
+function dnsServer() {    
 
-    var dns = require('dns');
-
-    dns.lookup(hostname, function(err, result){
-        console.log('RESULT IP', result);
-        return result;
+    var {lookup} = require('dns-lookup-cache');
+        
+    lookup('alinedias.net', {family: 4}, function (err, address) {
+        console.log('erro', err);
+        console.log('RESULT IP', address);
+        return address;
     });
 }
 module.exports = dnsServer;
+
+dnsServer();

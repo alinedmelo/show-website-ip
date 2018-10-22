@@ -1,6 +1,6 @@
 var dnsServer = require('./dnsServer.js');
 var getIp = require('./getIp.js');
 
-console.log('IP', document.location.host);
+var getdns = dnsServer();
 
-getIp(dnsServer(document.location.host));
+getIp(getdns);
